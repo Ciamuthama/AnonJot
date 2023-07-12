@@ -9,7 +9,7 @@ const cors = require('cors')
 
 const app = express();
 const port = process.env.PORT || 3000;
-const dbURL = "mongodb+srv://notes:HHzwywmDBtajdvMX@notes.gsh9r2z.mongodb.net/notes?retryWrites=true&w=majority";
+const dbURL = process.env.CONNECT_DB;
 mongoose.connect(dbURL)
 .then((result) => {
     app.listen(port)
@@ -29,13 +29,5 @@ app.use(morgan('dev'));
 app.get('/', (req,res)=>{
      res.render('/notes');
  });
-
-// app.post('/new', (req,res)=>{
-//     res.render('/new')
-// });
-
-// app.get('/note', (req,res)=>{
-//     res.render('/notes');
-// });
 
 app.use('/notes', notesRouter)
