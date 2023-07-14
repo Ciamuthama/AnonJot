@@ -26,10 +26,6 @@ app.use(cors({
     credentials: true
     })) 
 app.use(morgan('dev'));
-
-
-
-
 app.get('/', (req,res)=>{
      res.json('hello');
  });
