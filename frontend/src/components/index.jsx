@@ -12,7 +12,7 @@ function Notes() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/notes/', { cache: true });
+        const response = await axios.get('https://api-anon-jot.vercel.app/notes/', { cache: true });
         setContent(response.data);
         setLoading(false)
       } catch (error) {
