@@ -34,4 +34,4 @@ app.get('/', (req,res)=>{
      res.json('hello');
  });
 
-app.use('/notes', notesRouter)
+app.use('/', notesRouter)
