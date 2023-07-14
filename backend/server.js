@@ -31,7 +31,7 @@ app.use(morgan('dev'));
 
 
 app.get('/', (req,res)=>{
-     res.render('/notes').json('hello');
+     res.json('hello');
  });
 
 app.use('/notes', notesRouter)
