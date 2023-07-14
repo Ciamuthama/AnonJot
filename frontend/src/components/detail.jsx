@@ -14,7 +14,7 @@ function Details() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://api-anon-jot.vercel.app/notes/${params.id}`, { cache: true });
+        const response = await axios.get(`https://api-anon-jot.vercel.app/${params.id}`, { cache: true });
         setDetails(response.data);
         setLoading(false)
       } catch (error) {
@@ -35,7 +35,7 @@ function Details() {
   // }, [params.id]);
    
   const handleRemove = () => {
-    axios.delete(`http://localhost:3000/notes/${params.id}`)
+    axios.delete(`https://api-anon-jot.vercel.app/${params.id}`)
       .then(() => {
           setDetails(details.filter((details) => details.id !== details.id));
         })
