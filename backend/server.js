@@ -25,7 +25,7 @@ app.use(cors({
     methods: ['POST','GET'],
     credentials: true
     })) 
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 app.get('/', (req,res)=>{
      res.json('hello');
  });
