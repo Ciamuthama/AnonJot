@@ -21,7 +21,12 @@ mongoose.connect(process.env.CONNECT_DB)
 });
 
 app.use(express.json());
-app.use(cors()) 
+app.use(cors({
+    origin:["https://anonjot.vercel.app"],
+    methods:['GET','POST','DELETE'],
+    credentials: true
+
+})) 
 app.use(morgan('dev'));
 
 
