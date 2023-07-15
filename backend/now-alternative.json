@@ -8,12 +8,12 @@
       "methods": ["GET"]
     },
     {
-      "src": "/users",
+      "src": "/notes",
       "dest": "/server.js",
       "methods": ["GET"]
     },
     {
-      "src": "/user",
+      "src": "/notes",
       "dest": "/server.js",
       "methods": ["POST"]
     }
