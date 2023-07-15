@@ -8,7 +8,7 @@ const cors = require('cors')
 
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 const dbURL = "mongodb+srv://notes:HHzwywmDBtajdvMX@notes.gsh9r2z.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(dbURL)
 .then((result) => {
