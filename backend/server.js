@@ -8,26 +8,34 @@ const cors = require('cors')
 
 
 const app = express();
-const port = 3000;
-const dbURL = "mongodb+srv://notes:HHzwywmDBtajdvMX@notes.gsh9r2z.mongodb.net/?retryWrites=true&w=majority";
-mongoose.connect(dbURL)
-.then((result) => {
-    app.listen(port)
+const listener = app.listen( 3000, () => {
+    console.log(`connected to server` + listener.address().port)
+
+})
+mongoose.connect(process.env.CONNECT_DB)
+.then(() => {
     console.log('connected to database')
-    console.log("connected to server 3000")
 }).catch((err) => {
     console.log(err)
 });
 
 app.use(express.json());
-app.use(cors({
-    origin: ['https://anonjot.vercel.app'],
-    methods: ['POST','GET'],
-    credentials: true
-    })) 
+app.use(cors()) 
 app.use(morgan('dev'));
+
+
+
+
 app.get('/', (req,res)=>{
-     res.json('hello').redirect('/');
+     res.render('/notes');
  });
 
-app.use('/', notesRouter)
+// app.post('/new', (req,res)=>{
+//     res.render('/new')
+// });
+
+// app.get('/note', (req,res)=>{
+//     res.render('/notes');
+// });
+
+app.use('/notes', notesRouter)
