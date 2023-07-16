@@ -12,7 +12,7 @@ function Notes() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://anonjotapi.vercel.app/notes', { cache: true });
+        const response = await axios.get('https://anonjotapi.vercel.app/notes', { cache: true });
         setContent(response.data);
         setLoading(false)
       } catch (error) {
