@@ -22,12 +22,13 @@ mongoose.connect(process.env.CONNECT_DB)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({
-    origin:["https://anonjot.vercel.app"],
-    methods:['GET','POST','DELETE'],
-    credentials: true
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://anonjot.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  
 
-})) 
+  next();
+}); 
 app.use(morgan('dev'));
 app.get('/', (req,res)=>{
      res.json("hello").redirect('/notes');
