@@ -30,7 +30,7 @@ app.use((req, res, next) => {
   next();
 }); 
 app.use(morgan('dev'));
-app.get('/notes', (req,res)=>{
+app.get('/', (req,res)=>{
      res.json("hello").redirect('/notes');
  });
 
