@@ -25,7 +25,7 @@ function New() {
     }
     
     axios
-      .post("https://api-anon-jot.vercel.app/new", note)
+      .post("https://anonjotapi.vercel.app/new", note)
       .then((res) => res.data,
       )
       .catch((err)=> err)
