@@ -1,5 +1,5 @@
 const express = require("express");
-const Notes = require("../model/noteshema");
+const Notes = require("../model/noteshema.js");
 
 const router = express.Router();
 
