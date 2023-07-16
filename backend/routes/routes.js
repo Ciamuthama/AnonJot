@@ -3,7 +3,7 @@ const Notes = require("../model/noteshema");
 
 const router = express.Router();
 
-router.get("/notes", (req, res) => {
+router.get("/", (req, res) => {
   Notes.find()
     .sort({ createdAt: -1 })
     .then((result) => {
