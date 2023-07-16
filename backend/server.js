@@ -9,7 +9,7 @@ const cors = require('cors')
 
 
 const app = express();
-mongoose.connect(process.env.CONNECT_DB || "mongodb+srv://notes:notes123@notes.gsh9r2z.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(process.env.CONNECT_DB)
 .then(() => {
 console.log('connected to database')
 }).catch((err) => {
