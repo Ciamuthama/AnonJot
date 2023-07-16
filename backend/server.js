@@ -4,7 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require ('mongoose');
 const notesRouter = require('./routes/routes.js')
-const route = require("./api/routes.js")
+//const route = require("./api/routes.js")
 const cors = require('cors') 
 
 
@@ -40,5 +40,5 @@ app.get('/', (req,res)=>{
 // app.get('/note', (req,res)=>{
 //     res.render('/notes');
 // });
-app.use("/api/", routes)
+//app.use("/api/", routes)
 app.use('/', notesRouter)
