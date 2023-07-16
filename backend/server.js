@@ -9,13 +9,13 @@ const cors = require('cors')
 
 
 const app = express();
+mongoose.connect(process.env.CONNECT_DB || "mongodb+srv://notes:notes123@notes.gsh9r2z.mongodb.net/?retryWrites=true&w=majority")
+.then(() => {
+console.log('connected to database')
 const listener = app.listen( 3000, () => {
     console.log(`connected to server` + listener.address().port)
 
 })
-mongoose.connect(process.env.CONNECT_DB || "mongodb+srv://notes:notes123@notes.gsh9r2z.mongodb.net/?retryWrites=true&w=majority")
-.then(() => {
-    console.log('connected to database')
 }).catch((err) => {
     console.log(err)
 });
