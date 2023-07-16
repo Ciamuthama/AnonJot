@@ -30,7 +30,7 @@ app.use(cors({
 })) 
 app.use(morgan('dev'));
 app.get('/', (req,res)=>{
-     res.json("hello");
+     res.json("hello").redirect('/notes');
  });
 
 // app.post('/new', (req,res)=>{
@@ -41,4 +41,4 @@ app.get('/', (req,res)=>{
 //     res.render('/notes');
 // });
 //app.use("/api/", routes)
-app.use('/', notesRouter)
+app.use('/notes', notesRouter)
