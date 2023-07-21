@@ -3,13 +3,10 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-
 function Details() {
   const [details, setDetails] = useState([]);
   const [loading,setLoading] = useState(true)
   const params = useParams()
-  
-  
   
   useEffect(() => {
     const fetchData = async () => {
@@ -42,8 +39,7 @@ function Details() {
     }
     
     if(loading) return(<p>Loading your content...</p>)
-    
-    
+      
    return (
      <> 
          <div key={details.id}>
