@@ -1,4 +1,4 @@
-import '../App.css'
+import '../index.css'
 import axios from "axios"
 import Details from "../components/detail";
 import { useEffect, useState } from "react";
