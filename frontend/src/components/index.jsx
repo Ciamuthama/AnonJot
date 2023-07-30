@@ -23,7 +23,7 @@ function Notes() {
   }, []);
 
 <Route path={'/detail/id'} Component={Details} />
-if(loading) return(<p className='text-3xl font-bold underline'>Loading please wait...</p>)
+if(loading) return(<p className='text-3m'>Loading please wait...</p>)
 
 
 return (
