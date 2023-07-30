@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import {  useState } from "react";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom'
 
 function New() {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
+  const navigate = useNavigate()
 
   function onTitleChange(e) {
     setTitle(e.target.value);
@@ -17,18 +19,21 @@ function New() {
   function handleSubmit(e) {
     e.preventDefault();
     const note = {
-      title:title, body:body
+      title: title, body: body
+      
     }
     
     axios
-      .post("https://anonjotapi.vercel.app/notes/new", note)
-      .then((res) => res.data,
-      )
-      .catch((err)=> err)
+    .post("https://anonjotapi.vercel.app/notes/new", note)
+    .then((res) => res.data,
+    )
+    .catch((err)=> err)
        
      setTitle("");
      setBody("");
      console.log(title, body)
+     
+    navigate('..')
     }
     
  
@@ -50,7 +55,7 @@ function New() {
           value={body}
           onChange={onBodyChange}
           />
-        <button type="submit" onClick={()=> window.location.href='/'}>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </>
   );
