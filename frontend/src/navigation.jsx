@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import './index.css'
 
 function Navbar() {
 	return (
 		<>
-		<nav>
-			<ul>
+		<nav >
+			<ul className='flex h-16 items-center justify-evenly'>
 				<li>
 					<Link to="/">
 							<svg

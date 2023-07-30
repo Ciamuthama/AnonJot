@@ -23,16 +23,16 @@ function Notes() {
   }, []);
 
 <Route path={'/detail/id'} Component={Details} />
-if(loading) return(<p>Loading please wait...</p>)
+if(loading) return(<p className='text-3xl font-bold underline'>Loading please wait...</p>)
 
 
 return (
   <>
   
-    <div className='main'>
+    <div className='bg-black -m-1.5 p-1.5' >
     {content.map((note) => (
       
-      <div key={note.id} className='homeDiv'>
+      <div key={note.id}>
         <h1>{note.title}</h1>
         <p>{note.body}</p>
         <Link to={`/detail/${note._id}`}>Details</Link>
