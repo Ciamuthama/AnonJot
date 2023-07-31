@@ -29,7 +29,7 @@ if(loading) return(<p className='text-3m'>Loading please wait...</p>)
 return (
   <>
   
-    <div className='bg-black -m-1.5 p-1.5' >
+    <div className='m-1.5 p-1.5' >
     {content.map((note) => (
       
       <div key={note.id}>
