@@ -33,9 +33,10 @@ return (
     {content.map((note) => (
       
       <div key={note.id}>
+        <Link to={`/detail/${note._id}`}>
         <h1>{note.title}</h1>
         <p>{note.body}</p>
-        <Link to={`/detail/${note._id}`}>Details</Link>
+        </Link>
         </div>
     ))}
     </div>
