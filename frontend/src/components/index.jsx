@@ -29,12 +29,12 @@ if(loading) return(<p className='text-3m'>Loading please wait...</p>)
 return (
   <>
   
-    <div className='m-1.5 p-1.5' >
+    <div className='card w-96 bg-primary text-primary-content' >
     {content.map((note) => (
       
-      <div key={note.id}>
+      <div key={note.id} className='card-body'>
         <Link to={`/detail/${note._id}`}>
-        <h1>{note.title}</h1>
+        <h1 className='card-title'>{note.title}</h1>
         <p>{note.body}</p>
         </Link>
         </div>
