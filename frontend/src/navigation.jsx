@@ -75,7 +75,7 @@ function Navbar() {
             </Link>
           </li>
           <li>🌞
-			<button data-toggle-theme="dark,light" data-act-class="ACTIVECLASS"></button>
+			<button data-toggle-theme="coffee,retro" data-act-class="ACTIVECLASS"></button>
           🌙</li>
         </ul>
       </nav>
