@@ -40,9 +40,9 @@ function New() {
  
     return (
       <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="m-8 w-full">
           <input
-          className="input input-bordered input-success w-full max-w-xs"
+          className="input input-bordered input-info w-full max-w-xs"
           type="text"
           name="title"
           id="title"
@@ -51,7 +51,7 @@ function New() {
           onChange={onTitleChange}
         />
           <textarea
-            className="textarea textarea-info"
+          className="textarea textarea-info w-full max-w-xs"
           name="body"
           id="body"
           placeholder="Note"
