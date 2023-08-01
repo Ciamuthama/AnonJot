@@ -29,14 +29,16 @@ if(loading) return(<p className='text-3m'>Loading please wait...</p>)
 return (
   <>
   
-    <div className='card w-96 bg-primary text-primary-content' >
+    <div>
     {content.map((note) => (
-      
+      // eslint-disable-next-line react/jsx-key
+      <div className='card w-96 bg-primary text-primary-content' >
       <div key={note.id} className='card-body'>
         <Link to={`/detail/${note._id}`}>
         <h1 className='card-title'>{note.title}</h1>
         <p>{note.body}</p>
         </Link>
+        </div>
         </div>
     ))}
     </div>
