@@ -29,7 +29,7 @@ if(loading) return(<p className='text-3m'>Loading please wait...</p>)
 return (
   <>
   
-    <div className='flex justify-center'>
+    <div className='flex justify-center flex-col'>
     {content.map((note) => (
       // eslint-disable-next-line react/jsx-key
       <div className='card w-96 bg-primary text-primary-content mb-4 flex justify-center' >
