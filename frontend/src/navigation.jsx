@@ -5,7 +5,7 @@ function Navbar() {
 	return (
 		<>
 		<nav >
-			<ul className='menu menu-horizontal bg-base-200 rounded-box'>
+			<ul className='justify-center menu menu-horizontal bg-base-200 rounded-box w-full'>
 				<li>
 					<Link to="/">
 							<svg
