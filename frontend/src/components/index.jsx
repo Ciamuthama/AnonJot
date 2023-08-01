@@ -29,7 +29,7 @@ if(loading) return(<p className='text-3m'>Loading please wait...</p>)
 return (
   <>
   
-    <div className='grid grid-cols-4  gap-4  mx-8'>
+    <div className='grid grid-cols-4 md:grid-cols-2 gap-4  mx-8'>
     {content.map((note) => (
       // eslint-disable-next-line react/jsx-key
       <div className='card w-1/2 bg-primary text-primary-content mb-4 flex justify-center' >
