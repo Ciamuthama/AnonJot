@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import {  useState } from "react";
 import axios from "axios";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import '../index.css'
 
 function New() {
   const [title, setTitle] = useState('');
@@ -40,7 +41,8 @@ function New() {
     return (
       <>
       <form onSubmit={handleSubmit}>
-        <input
+          <input
+          className="input input-bordered input-success w-full max-w-xs"
           type="text"
           name="title"
           id="title"
@@ -48,7 +50,8 @@ function New() {
           value={title}
           onChange={onTitleChange}
         />
-        <textarea
+          <textarea
+            className="textarea textarea-info"
           name="body"
           id="body"
           placeholder="Note"
