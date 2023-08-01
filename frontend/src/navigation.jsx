@@ -75,9 +75,9 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <label className="swap swap-rotate">
+            <label className="swap swap-rotate" data-toggle-theme="coffee,retro" data-act-class="ACTIVECLASS">
               {/* this hidden checkbox controls the state */}
-              <input type="checkbox" data-toggle-theme="coffee,retro" data-act-class="ACTIVECLASS" />
+              <input type="checkbox"  />
 
               {/* sun icon */}
               <svg
