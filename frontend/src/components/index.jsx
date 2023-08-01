@@ -32,7 +32,7 @@ return (
     <div>
     {content.map((note) => (
       // eslint-disable-next-line react/jsx-key
-      <div className='card w-96 bg-primary text-primary-content mb-4' >
+      <div className='card w-96 bg-primary text-primary-content mb-4 flex justify-center' >
       <div key={note.id} className='card-body'>
         <Link to={`/detail/${note._id}`}>
         <h1 className='card-title'>{note.title}</h1>
