@@ -29,10 +29,10 @@ if(loading) return(<p className='text-3m'>Loading please wait...</p>)
 return (
   <>
   
-    <div className='flex gap-4 flex-wrap mx-8'>
+    <div className='flex justify-center gap-4 flex-wrap mx-8'>
     {content.map((note) => (
       // eslint-disable-next-line react/jsx-key
-      <div className='card w-96 bg-primary text-primary-content mb-4 flex justify-center' >
+      <div className='card w-1/2 bg-primary text-primary-content mb-4 flex justify-center' >
       <div key={note.id} className='card-body'>
         <Link to={`/detail/${note._id}`}>
         <h1 className='card-title'>{note.title}</h1>
