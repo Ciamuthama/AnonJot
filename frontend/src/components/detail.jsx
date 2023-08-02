@@ -43,12 +43,12 @@ function Details() {
       
    return (
      <> 
-         <div key={details.id}>
+         <div className="bg-primary text-primary-content mb-4 flex justify-center" key={details.id}>
            <h1> {details.title} </h1>
            <p> {details.body}</p>
        </div>
        <div onClick={()=>window.location.href='/'}>
-         <button onClick={()=> handleRemove(details.id)}>Delete</button>
+         <button onClick={()=> handleRemove(details.id)} className="btn btn-md md:btn-md lg:btn-lg btn-error">Delete</button>
        </div>
      </>
    );
