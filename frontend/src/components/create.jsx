@@ -61,12 +61,15 @@ function New() {
           value={body}
           onChange={onBodyChange}
         />
+        <div className="flex justify-end">
         <button
           type="submit"
           className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
         >
           Submit
         </button>
+
+        </div>
       </form>
     </>
   );
