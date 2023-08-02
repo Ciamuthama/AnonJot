@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <>
       <nav>
-        <ul className="justify-evenly menu menu-horizontal bg-base-200 rounded-b w-full fixed">
+        <ul className="justify-evenly menu menu-horizontal bg-base-200 rounded-b w-full fixed m-32 z-100">
           <li>
             <Link to="/">
               <svg
