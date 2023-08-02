@@ -44,7 +44,7 @@ function Details() {
    return (
      <> 
        <div>
-         <div className=" card text-primary-content mb-4 flex justify-center m-8 bg-secondary" key={details.id}>
+         <div className=" card text-primary-content mb-4 flex justify-center bg-secondary p-8" key={details.id}>
            <h1> {details.title} </h1>
            <p> {details.body}</p>
        </div>
