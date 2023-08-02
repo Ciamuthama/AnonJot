@@ -13,7 +13,7 @@ function Navbar() {
 	
   return (
     <>
-      <nav>
+      <nav className="fixed">
         <ul className="justify-evenly menu menu-horizontal bg-base-200 rounded-b w-full">
           <li>
             <Link to="/">
