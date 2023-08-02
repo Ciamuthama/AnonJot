@@ -3,6 +3,7 @@ import axios from "axios"
 import Details from "../components/detail";
 import { useEffect, useState } from "react";
 import { Link, Route } from 'react-router-dom';
+import { Loader } from './Loader';
 
 function Notes() {
   const [content, setContent] = useState([]);
@@ -23,7 +24,6 @@ function Notes() {
   }, []);
 
 <Route path={'/detail/id'} Component={Details} />
-if(loading) return(<p className='text-3m'>Loading please wait...</p>)
 
 
 return (
@@ -34,6 +34,7 @@ return (
       // eslint-disable-next-line react/jsx-key
       <div className='card  bg-primary text-primary-content mb-4 flex justify-center' >
       <div key={note.id} className='card-body'>
+        if(loading) return(<Loader />)
         <Link to={`/detail/${note._id}`}>
         <h1 className='card-title'>{note.title}</h1>
         <p>{note.body}</p>
