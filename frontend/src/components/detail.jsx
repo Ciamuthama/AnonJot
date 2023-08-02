@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Loader } from "./Loader";
 
 function Details() {
   const [details, setDetails] = useState([]);
@@ -38,7 +39,7 @@ function Details() {
         })
     }
     
-    if(loading) return(<p>Loading your content...</p>)
+    if(loading) return(< Loader />)
       
    return (
      <> 
