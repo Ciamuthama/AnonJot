@@ -43,7 +43,7 @@ function New() {
         className="flex flex-col justify-center m-8"
       >
         <input
-          className="input-md input-bordered bg-primary-content rounded-lg w-full mb-8"
+          className="input-md input-bordered bg-primary-content rounded-lg  w-full mb-8"
           type="text"
           name="title"
           id="title"
