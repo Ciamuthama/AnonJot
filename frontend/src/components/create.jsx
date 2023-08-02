@@ -40,7 +40,7 @@ function New() {
  
     return (
       <>
-      <form onSubmit={handleSubmit} className="flex flex-col justify-center m-8 w-full">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-center m-8">
           <input
           className="input-md input-bordered input-info w-full mb-8"
           type="text"
