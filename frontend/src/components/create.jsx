@@ -64,7 +64,7 @@ function New() {
         <div className="flex justify-end">
         <button
           type="submit"
-          className="btn btn-xs md:btn-md lg:btn-lg"
+          className="btn btn-md md:btn-md lg:btn-lg btn-accent"
         >
           Submit
         </button>
