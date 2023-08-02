@@ -24,6 +24,7 @@ function Notes() {
   }, []);
 
 <Route path={'/detail/id'} Component={Details} />
+if(loading) return(<Loader />)
 
 
 return (
@@ -34,7 +35,6 @@ return (
       // eslint-disable-next-line react/jsx-key
       <div className='card  bg-primary text-primary-content mb-4 flex justify-center' >
       <div key={note.id} className='card-body'>
-        if(loading) return(<Loader />)
         <Link to={`/detail/${note._id}`}>
         <h1 className='card-title'>{note.title}</h1>
         <p>{note.body}</p>
