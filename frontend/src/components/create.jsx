@@ -64,7 +64,7 @@ function New() {
           <button
           onClick={()=> window.location.href='/'}
           type="submit"
-          className="btn btn-md md:btn-md lg:btn-lg btn-accent"
+          className="btn btn-md md:btn-md btn-accent"
         >
           Submit
           </button>
