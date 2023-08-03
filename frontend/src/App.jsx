@@ -5,7 +5,7 @@ import Notes from "./components/index";
 import Details from "./components/detail";
 import New from "./components/create";
 import About from "./components/about";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
 
@@ -16,15 +16,14 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <br />
         <Routes>
           <Route exact path="/" Component={Notes} />
           <Route path="/detail/:id" Component={Details} />
           <Route path="/new" Component={New} />
           <Route path="/about" Component={About} />
-          <Route path="*" >
+          {/* <Route path="*" >
             <Navigate to='/' />
-          </Route>
+          </Route> */}
         </Routes>
       </Router>
     </>
