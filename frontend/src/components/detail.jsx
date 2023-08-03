@@ -1,7 +1,7 @@
 // /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Loader } from "./Loader";
 
 function Details() {
@@ -38,7 +38,7 @@ function Details() {
       .then(() => {
           setDetails(details.filter((details) => details.id !== details.id));
       })
-    navigate('/')
+    
     }
     
     if(loading) return(< Loader />)
@@ -50,10 +50,12 @@ function Details() {
            <h1> {details.title} </h1>
            <p> {details.body}</p>
        </div>
-       <div className="flex justify-end">
-         <button onClick={()=> handleRemove(details.id)} className="btn btn-md md:btn-md lg:btn-lg btn-error">Delete</button>
+       <div className="flex justify-end gap-3">
+         <button onClick={()=> {handleRemove(details.id);navigate('/')}} className="btn btn-md md:btn-md  btn-error">Delete</button>
+         <Link to='..'>
+           <button className="btn btn-md md:btn-md btn-warning">Back</button>
+       </Link>
        </div>
-         
        </div>
      </>
    );

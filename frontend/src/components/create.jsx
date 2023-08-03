@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../index.css";
 
 function New() {
@@ -33,7 +33,6 @@ function New() {
     setBody("");
     console.log(title, body);
 
-    navigate("/");
   }
 
   return (
@@ -62,13 +61,16 @@ function New() {
           onChange={onBodyChange}
         />
         <div className="flex justify-end">
-        <button
+          <button
+          onClick={()=> navigate("/")}
           type="submit"
           className="btn btn-md md:btn-md lg:btn-lg btn-accent"
         >
           Submit
-        </button>
-
+          </button>
+          <Link to='..'>
+            <button type="button" className="btn btn-md md-:btn-md btn-waring">Cancel</button>
+          </Link>
         </div>
       </form>
     </>
