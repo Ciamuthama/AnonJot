@@ -16,6 +16,7 @@ function App() {
     <>
       <Router>
         <Navbar />
+        <br />
         <Routes>
           <Route exact path="/" Component={Notes} />
           <Route path="/detail/:id" Component={Details} />

@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../index.css";
 
 function New() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const navigate = useNavigate();
+ 
 
   function onTitleChange(e) {
     setTitle(e.target.value);
@@ -60,9 +60,9 @@ function New() {
           value={body}
           onChange={onBodyChange}
         />
-        <div className="flex justify-end">
+        <div className="flex justify-end gap-3">
           <button
-          onClick={()=> navigate("/")}
+          onClick={()=> window.location.href='/'}
           type="submit"
           className="btn btn-md md:btn-md lg:btn-lg btn-accent"
         >

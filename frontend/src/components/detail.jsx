@@ -1,14 +1,14 @@
 // /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link,  useParams } from "react-router-dom";
 import { Loader } from "./Loader";
 
 function Details() {
   const [details, setDetails] = useState([]);
   const [loading,setLoading] = useState(true)
   const params = useParams()
-  const navigate = useNavigate()
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,7 +51,7 @@ function Details() {
            <p> {details.body}</p>
        </div>
        <div className="flex justify-end gap-3">
-         <button onClick={()=> {handleRemove(details.id);navigate('/')}} className="btn btn-md md:btn-md  btn-error">Delete</button>
+         <button onClick={()=> {handleRemove(details.id); window.location.href='/'}} className="btn btn-md md:btn-md  btn-error">Delete</button>
          <Link to='..'>
            <button className="btn btn-md md:btn-md btn-warning">Back</button>
        </Link>
