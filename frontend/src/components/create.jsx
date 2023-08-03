@@ -33,7 +33,7 @@ function New() {
     setBody("");
     console.log(title, body);
 
-    navigate("..");
+    navigate("/");
   }
 
   return (

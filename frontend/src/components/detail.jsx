@@ -38,7 +38,7 @@ function Details() {
       .then(() => {
           setDetails(details.filter((details) => details.id !== details.id));
       })
-    navigate('..')
+    navigate('/')
     }
     
     if(loading) return(< Loader />)
