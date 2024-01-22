@@ -35,7 +35,7 @@ return (
       // eslint-disable-next-line react/jsx-key
       <div className='card  bg-primary text-primary-content mb-4 flex justify-center' >
       <div key={note.id} className='card-body'>
-        <Link to={`/${note._id}`}>
+        <Link to={`detail/${note._id}`}>
         <h1 className='card-title'>{note.title}</h1>
         <p>{note.body}</p>
         </Link>
