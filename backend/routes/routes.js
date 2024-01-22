@@ -40,19 +40,17 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.patch("/:id", (req, res) => {
+router.patch("/:id", async (req, res) => {
   const id = req.params.id;
-  Notes.findByIdAndUpdate(id);
-  const note = new Notes(req.body);
-
-  note
-    .save()
-    .then((result) => {
-      res.json(result);
-    })
-    .catch((err) => {
-      res.status(404).json(`ERROR${err}`);
-    });
+  try {
+        const updatedNote = await Notes.findByIdAndUpdate(id, req.body, { new: true });
+    if (!updatedNote) {
+      return res.status(404).json({ error: 'Note not found' });
+    }
+    res.json(updatedNote);
+  } catch (err) {
+    res.status(500).json({ error: `Internal Server Error: ${err.message}` });
+  }
 });
 
 router.delete("/:id", (req, res) => {
